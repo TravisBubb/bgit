@@ -13,3 +13,10 @@ The intent of this project is to create a command-line tool with a simplified fe
 - branches
     - be able to create a new branch
     - create a 'root' branch when repository is initialized
+
+
+Wishlist Features:
+- allow cloning remote git repos (e.g., GitHub)
+    - convert from git -> bgit repo
+- allow pushing to GitHub
+- allow pulling from GitHub
