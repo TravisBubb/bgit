@@ -1,11 +1,11 @@
 #include <iostream>
 #include <filesystem>
 #include <fstream>
-#include "Init.hpp"
+#include "InitCommand.hpp"
 
 namespace bgit::commands
 {
-    int Init::execute() const
+    const int InitCommand::execute() const
     {
         try
         {

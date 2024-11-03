@@ -25,6 +25,9 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
+    if (!command->validateOptions(argc, argv))
+        return EXIT_FAILURE;
+
     if (!command->execute())
         return EXIT_FAILURE;
 
