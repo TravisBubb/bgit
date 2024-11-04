@@ -20,3 +20,7 @@ Wishlist Features:
     - convert from git -> bgit repo
 - allow pushing to GitHub
 - allow pulling from GitHub
+
+- allow initializing repositories with specific boiler-plate for different projects (e.g., dotnet web api)
+
+Future Note: bgit is currently implemented using the SHA256 hashing algorithm, where git uses SHA1. This may cause compatibility issues in the future, so we may need to evaluate potential solutions.

@@ -5,7 +5,7 @@
 
 namespace bgit::commands
 {
-    const int InitCommand::execute() const
+    const bool InitCommand::execute() const
     {
         try
         {
@@ -22,16 +22,16 @@ namespace bgit::commands
             else
             {
                 std::cerr << "Failed to create .bgit/HEAD file.\n";
-                return EXIT_FAILURE;
+                return false;
             }
 
             std::cout << "Initialized git directory\n";
-            return EXIT_SUCCESS;
+            return true;
         }
         catch (const std::filesystem::filesystem_error &e)
         {
             std::cerr << e.what() << '\n';
-            return EXIT_FAILURE;
+            return false;
         }
     }
 }

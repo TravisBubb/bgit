@@ -10,7 +10,7 @@ namespace bgit::commands
     public:
         CatFileCommand() {}
         ~CatFileCommand() {}
-        const int execute() const override;
-        const int validateOptions(const int, char*[]) const override { return EXIT_SUCCESS; };
+        const bool execute() const override;
+        const bool validateOptions(const int, char*[]) override { return true; };
     };
 }

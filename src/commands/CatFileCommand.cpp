@@ -2,8 +2,8 @@
 
 namespace bgit::commands
 {
-    const int CatFileCommand::execute() const
+    const bool CatFileCommand::execute() const
     {
-        return EXIT_SUCCESS;
+        return true;
     }
 }

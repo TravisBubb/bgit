@@ -6,7 +6,7 @@ namespace bgit::interfaces
     {
     public:
         virtual ~ICommand() {}
-        const virtual int execute() const = 0;
-        const virtual int validateOptions(const int, char *[]) const = 0;
+        const virtual bool execute() const = 0;
+        const virtual bool validateOptions(const int, char *[]) = 0;
     };
 }

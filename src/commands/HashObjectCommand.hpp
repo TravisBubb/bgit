@@ -1,20 +1,20 @@
 #pragma once
 
-#include <memory>
+#include <string>
 #include "../interfaces/ICommand.hpp"
-#include "../models/HashObjectOptions.hpp"
 
 namespace bgit::commands
 {
     class HashObjectCommand : public bgit::interfaces::ICommand
     {
     private:
-        std::unique_ptr<bgit::models::HashObjectOptions> options;
+        bool writeObject;
+        std::string objectPath;
 
     public:
         HashObjectCommand() {}
         ~HashObjectCommand() {}
-        const int execute() const override;
-        const int validateOptions(const int, char *[]) const override;
+        const bool execute() const override;
+        const bool validateOptions(const int, char *[]) override;
     };
 }
