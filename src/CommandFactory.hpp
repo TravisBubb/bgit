@@ -1,15 +1,13 @@
 #pragma once
 
-#include <memory>
 #include "interfaces/ICommand.hpp"
+#include <memory>
 
-namespace bgit
-{
-    class CommandFactory
-    {
-    public:
-        CommandFactory() {}
-        ~CommandFactory() {}
-        std::unique_ptr<bgit::interfaces::ICommand> Create(std::string type);
-    };
-}
+namespace bgit {
+class CommandFactory {
+public:
+  CommandFactory() {}
+  ~CommandFactory() {}
+  std::unique_ptr<bgit::interfaces::ICommand> Create(const std::string &);
+};
+} // namespace bgit
